@@ -1,15 +1,22 @@
-import click
+from setuptools import setup, find_packages
 
+setup(
+    name='package',
+    version='0.1',
+    packages=find_packages(),
+    include_package_data=True,
+    install_requires=[
+        'Click',
+    ],
+    entry_points='''
+        [console_scripts]
+        script=package.scripts.script:cli
+    ''',
+)
 
-@click.command()
-@click.option("--count", default=1, help="Number of greetings.")
-@click.option("--name", prompt="Your name", help="The person to greet.")
-def hello(count, name):
-    """Simple program that greets NAME for a total of COUNT times."""
-    for _ in range(count):
-        click.echo(f"Hello, {name}!")
+# test the script
+# $ virtualenv venv
+# $ . venv/bin/activate
+# $ pip install --editable .
+# $ script --count=3
 
-
-if __name__ == '__main__':
-    hello()
-# python main.py --count=3
