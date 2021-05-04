@@ -1,4 +1,5 @@
 
         [console_scripts]
         yourscript=testpackage.scripts.yourscript:cli
+        
     
