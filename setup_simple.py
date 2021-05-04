@@ -1,15 +1,15 @@
 from setuptools import setup
 
 setup(
-    name='script',
+    name='testscript',
     version='0.1',
-    py_modules=['script'],
+    py_modules=['yourscript'],
     install_requires=[
         'Click',
     ],
     entry_points='''
         [console_scripts]
-        script=script:cli
+        yourscript=yourscript:cli
     ''',
 )
 

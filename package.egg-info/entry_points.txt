@@ -1,4 +1,0 @@
-
-        [console_scripts]
-        script=package.scripts.script:cli
-    
