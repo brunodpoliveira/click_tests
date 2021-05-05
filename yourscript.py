@@ -15,7 +15,8 @@ pass_config = click.make_pass_decorator(Config, ensure=True)
 # subgroup of commands - does not do anything useful on this toy program
 @click.group()
 @click.option('--verbose', is_flag=True)
-@click.option('--home-directory', type=click.Path())
+@click.option('--home-directory', type=click.Path(),
+              help="set home directory to text output")
 @pass_config
 def cli(config, verbose, home_directory):
     config.verbose = verbose
@@ -25,13 +26,15 @@ def cli(config, verbose, home_directory):
 
 
 @cli.command()
-@click.option("--count", default=1, help="Number of greetings.")
-@click.option("--greet", prompt="Your name", help="The person to greet.")
+@click.option("--count", default=1,
+              help="Number of greetings.")
+@click.option("--name", prompt="Your name",
+              help="The person to greet.")
 # write output to file, default false
 @click.argument('out', type=click.File('w'), default='-', required=False)
 @pass_config
 def greet(config, count, name, out):
-    """Simple program that greets NAME for a total of COUNT times."""
+    """Simple program that greets NAME for a total of COUNT times"""
     if config.verbose:
         click.echo('We are in verbose mode')
     click.echo('Home Directory is %s' % config.home_directory)
