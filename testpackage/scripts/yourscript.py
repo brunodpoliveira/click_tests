@@ -12,9 +12,9 @@ class Config(object):
 pass_config = click.make_pass_decorator(Config, ensure=True)
 
 
-# subgroup of commands - does not do anything useful on this toy program
+# subgroup of commands - verbose does not do anything useful on this toy program
 @click.group()
-@click.option('--verbose', is_flag=True)
+@click.option('--verbose', is_flag=True,)
 @click.option('--home-directory', type=click.Path(),
               help="set home directory to text output")
 @pass_config

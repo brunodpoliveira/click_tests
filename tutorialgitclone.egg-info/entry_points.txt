@@ -1,0 +1,5 @@
+
+        [console_scripts]
+        gitclone=tutorialgitclone.scripts.gitclone:cli
+
+    

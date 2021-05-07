@@ -1,0 +1,14 @@
+README.md
+setup.py
+testpackage/__init__.py
+testpackage/main.py
+testpackage/utils.py
+tutorialgitclone/__init__.py
+tutorialgitclone/main.py
+tutorialgitclone/utils.py
+tutorialgitclone.egg-info/PKG-INFO
+tutorialgitclone.egg-info/SOURCES.txt
+tutorialgitclone.egg-info/dependency_links.txt
+tutorialgitclone.egg-info/entry_points.txt
+tutorialgitclone.egg-info/requires.txt
+tutorialgitclone.egg-info/top_level.txt

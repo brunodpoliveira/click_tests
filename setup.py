@@ -11,7 +11,6 @@ setup(
     entry_points='''
         [console_scripts]
         yourscript=testpackage.scripts.yourscript:cli
-        
     ''',
 )
 

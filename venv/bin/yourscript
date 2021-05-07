@@ -1,6 +1,6 @@
 #!/home/bruno/MEGA/code/click_tests/venv/bin/python
-# EASY-INSTALL-ENTRY-SCRIPT: 'testpackage','console_scripts','yourscript'
-__requires__ = 'testpackage'
+# EASY-INSTALL-ENTRY-SCRIPT: 'tutorialgitclone','console_scripts','yourscript'
+__requires__ = 'tutorialgitclone'
 import re
 import sys
 from pkg_resources import load_entry_point
@@ -8,5 +8,5 @@ from pkg_resources import load_entry_point
 if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
     sys.exit(
-        load_entry_point('testpackage', 'console_scripts', 'yourscript')()
+        load_entry_point('tutorialgitclone', 'console_scripts', 'yourscript')()
     )
